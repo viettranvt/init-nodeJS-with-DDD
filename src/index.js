@@ -3,7 +3,6 @@
 const express = require('express')
 const bodyParser = require('body-parser')
 const container = require('./infrastructure/config/inversify.config')
-const { UserController } = require('./interfaces/controllers/UserController')
 
 async function bootstrap() {
   const app = express()
@@ -18,8 +17,8 @@ async function bootstrap() {
   })
 
   // Routes
-  const userController = container.get(UserController)
-  app.use('/api/users', userController.router)
+  const userRoute = container.get(UserRoute)
+  app.use('/api/users', userRoute.router)
 
   // Error handling middleware
   app.use((err, req, res, next) => {
