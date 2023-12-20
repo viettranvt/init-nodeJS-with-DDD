@@ -1,0 +1,19 @@
+{
+  "name": "init-nodejs-with-ddd",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/viettranvt/init-nodeJS-with-DDD.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/viettranvt/init-nodeJS-with-DDD/issues"
+  },
+  "homepage": "https://github.com/viettranvt/init-nodeJS-with-DDD#readme"
+}
