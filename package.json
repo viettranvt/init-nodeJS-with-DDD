@@ -4,16 +4,29 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint --fix --ext .js,.jsx ."
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/viettranvt/init-nodeJS-with-DDD.git"
   },
-  "author": "",
+  "author": "Viettran",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/viettranvt/init-nodeJS-with-DDD/issues"
   },
-  "homepage": "https://github.com/viettranvt/init-nodeJS-with-DDD#readme"
+  "homepage": "https://github.com/viettranvt/init-nodeJS-with-DDD#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "inversify": "^6.0.2"
+  },
+  "devDependencies": {
+    "eslint": "^8.56.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-config-standard": "^17.1.0",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-n": "^16.5.0",
+    "eslint-plugin-promise": "^6.1.1"
+  }
 }
