@@ -2,11 +2,17 @@
 
 const express = require('express')
 const { injectable } = require('inversify')
+const UserController = require('../controllers/UserController')
+const ExampleUseCase = require('../../application/use-cases/ExampleUseCase')
 
 @injectable()
 class UserRoute {
-  constructor(userController) {
+  constructor(
+    @inject(UserController) userController,
+    @inject(ExampleUseCase) exampleUseCase
+  ) {
     this.userController = userController
+    this.exampleUseCase = exampleUseCase
     this.router = express.Router()
     this.initializeRoutes()
   }

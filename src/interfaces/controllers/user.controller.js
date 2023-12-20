@@ -1,14 +1,19 @@
 // /src/interfaces/controllers/UserController.js
 
 const { inject, injectable } = require('inversify')
+const ExampleUseCase = require('../../application/use-cases/ExampleUseCase')
 
 @injectable()
 class UserController {
-  constructor(userUseCase) {
+  constructor(@inject(ExampleUseCase) exampleUseCase, userUseCase) {
     this.userUseCase = userUseCase
+    this.exampleUseCase = exampleUseCase
   }
 
   async getAllUsers(req, res, next) {
+    const length = req.params.length || 10
+    const randomString = this.exampleUseCase.generateRandomString(length)
+    res.json({ randomString })
     // Implement logic to get all users
   }
 
